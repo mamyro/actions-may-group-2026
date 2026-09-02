@@ -5,7 +5,12 @@ provider "aws" {
 }
 
 terraform {
+    backend "s3:" {
+        bucket = "kaizen-adiletm"
+        key    = "my-laptop-key"
+        region = var.region
 
+}
 }
 
 data "aws_ami" "ubuntu" {
@@ -33,6 +38,7 @@ resource "aws_instance" "example" {
   }
 }
 
+#test trying to fix github issue
 
 
 variable "region" {}
