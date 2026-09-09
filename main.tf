@@ -7,8 +7,8 @@ provider "aws" {
 terraform {
     backend "s3:" {
         bucket = "kaizen-adiletm"
-        key    = "my-laptop-key"
-        region = var.region
+        key    = "terraform.tfstate"
+        region = "us-east-1"
 
 }
 }
